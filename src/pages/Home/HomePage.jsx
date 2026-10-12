@@ -1,4 +1,4 @@
-import heroImg from '../../assets/heroImg.png';
+import heroImg from '../../assets/heroImg.avif';
 
 export default function HomePage() {
     return (

@@ -1,8 +1,8 @@
-import engProj from '../assets/projects/engProj.jpg'
-import cryptoProj from '../assets/projects/cryptoProj.jpg'
-import blogProj from '../assets/projects/blogProj.jpg'
-import mpmProj from '../assets/projects/mpmProj.jpg'
-import herewasProj from '../assets/projects/herewasProj.jpg'
+import engProj from '../assets/projects/engProj.avif'
+import cryptoProj from '../assets/projects/cryptoProj.avif'
+import blogProj from '../assets/projects/blogProj.avif'
+import mpmProj from '../assets/projects/mpmProj.avif'
+import herewasProj from '../assets/projects/herewasProj.avif'
 
 const projects = [
     {
