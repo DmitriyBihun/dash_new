@@ -1,0 +1,171 @@
+.projects-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4vw;
+    row-gap: 6vw;
+    width: 100%;
+    padding: 150px 0;
+
+}
+
+/* Обертка для карточки */
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Фиксируем максимальную ширину для контента внутри колонки */
+.item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Расстояние между стеком, картинкой и текстом */
+    width: 100%;
+}
+
+/* Стек технологий: равномерное распределение, как на скрине */
+.item-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: rgb(27, 26, 31, .5);
+}
+
+/* Контейнер картинки под будущий параллакс */
+.img-container {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    transform: translateZ(0);
+    width: 100%;
+    /* background-color: #eaeaea; */
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.4);
+    will-change: transform;
+    /* filter: grayscale(100%); */
+    transition: filter 0.4s ease;
+}
+
+.img-container:hover img {
+    filter: grayscale(0%);
+}
+
+/* Текстовый блок снизу */
+.item-details {
+    font-size: 14px;
+    line-height: 1.35;
+    color: #000;
+}
+
+.item-title {
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-title:hover {
+    text-decoration: underline;
+}
+
+/* Item 1: Ширина 652px | 652 / 370 */
+.gallery-item:nth-child(5n + 1) {
+    grid-column: 1 / -1;
+    align-items: center;
+}
+
+.gallery-item:nth-child(5n + 1) .item-content {
+    max-width: 652px;
+}
+
+.gallery-item:nth-child(5n + 1) .img-container {
+    aspect-ratio: 652 / 370;
+}
+
+/* Item 2: Ширина 482px | 482 / 300 */
+.gallery-item:nth-child(5n + 2) {
+    align-items: flex-start;
+}
+
+.gallery-item:nth-child(5n + 2) .item-content {
+    max-width: 482px;
+}
+
+.gallery-item:nth-child(5n + 2) .img-container {
+    aspect-ratio: 482 / 300;
+}
+
+/* Item 3: Ширина 652px | 652 / 548 */
+.gallery-item:nth-child(5n + 3) {
+    align-items: flex-end;
+}
+
+.gallery-item:nth-child(5n + 3) .item-content {
+    max-width: 652px;
+}
+
+.gallery-item:nth-child(5n + 3) .img-container {
+    aspect-ratio: 652 / 548;
+}
+
+/* Item 4: Ширина 296px | 296 / 420 */
+.gallery-item:nth-child(5n + 4) {
+    align-items: flex-start;
+}
+
+.gallery-item:nth-child(5n + 4) .item-content {
+    max-width: 296px;
+}
+
+.gallery-item:nth-child(5n + 4) .img-container {
+    aspect-ratio: 296 / 420;
+}
+
+/* Item 5: Ширина 482px | 482 / 360 */
+.gallery-item:nth-child(5n + 5) {
+    align-items: flex-start;
+}
+
+.gallery-item:nth-child(5n + 5) .item-content {
+    max-width: 482px;
+}
+
+.gallery-item:nth-child(5n + 5) .img-container {
+    aspect-ratio: 482 / 360;
+}
+
+@media (max-width: 1024px) {
+
+    /* Сбрасываем margin-top для планшетов и телефонов, если нужно */
+    .gallery-item:nth-child(n) {
+        margin-top: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-gallery {
+        grid-template-columns: 1fr;
+        gap: 12vw;
+        padding: 100px 0;
+    }
+
+    .gallery-item:nth-child(n) {
+        grid-column: 1 / -1;
+        align-items: center;
+    }
+
+    .gallery-item:nth-child(n) .item-content {
+        max-width: 100%;
+    }
+}

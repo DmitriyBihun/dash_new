@@ -1,0 +1,178 @@
+.contact-sidebar {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+}
+
+.contact-sidebar__backdrop {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: rgba(27, 26, 31, 0.278);
+    cursor: pointer;
+}
+
+.contact-sidebar__panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: min(32rem, 88vw);
+    height: 100%;
+    background: #1b1a1f;
+    color: #ebebeb;
+}
+
+.contact-sidebar__curve {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 96px;
+    height: 100%;
+    overflow: visible;
+}
+
+.contact-sidebar__curve-path {
+    fill: #1b1a1f;
+}
+
+.contact-sidebar__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1.15rem 1.5rem 1.5rem;
+}
+
+.contact-sidebar__topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-sidebar__eyebrow,
+.contact-sidebar__index,
+.contact-sidebar__title {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+}
+
+.contact-sidebar__eyebrow {
+    color: rgb(235 235 235 / 60%);
+}
+
+.contact-sidebar__close {
+    position: relative;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid rgb(235 235 235 / 24%);
+    border-radius: 999px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.contact-sidebar__close span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.9rem;
+    height: 1px;
+    background: #ebebeb;
+}
+
+.contact-sidebar__close span:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.contact-sidebar__close span:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.contact-sidebar__close:hover {
+    background: #ebebeb;
+}
+
+.contact-sidebar__close:hover span {
+    background: #1b1a1f;
+}
+
+.contact-sidebar__contacts {
+    width: 100%;
+    margin: auto 0;
+}
+
+.contact-sidebar__title {
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid rgb(235 235 235 / 34%);
+    color: rgb(235 235 235 / 62%);
+}
+
+.contact-sidebar__contact-list {
+    display: grid;
+}
+
+.contact-sidebar__contact {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.25rem;
+    width: 100%;
+    padding: 1.35rem 0 1.2rem;
+    border: 0;
+    border-bottom: 1px solid rgb(235 235 235 / 20%);
+    background: transparent;
+    color: #ebebeb;
+    font: inherit;
+    font-size: clamp(1.55rem, 4vw, 2.25rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.045em;
+    text-align: right;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact-sidebar__contact:hover,
+.contact-sidebar__contact:focus-visible {
+    color: #fff;
+}
+
+.contact-sidebar__contact:focus-visible {
+    outline: 2px solid #ebebeb;
+    outline-offset: -2px;
+}
+
+.contact-sidebar__index {
+    color: rgb(235 235 235 / 50%);
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 520px) {
+    .contact-sidebar__panel {
+        width: 100vw;
+    }
+
+    .contact-sidebar__curve {
+        display: none;
+    }
+
+    .contact-sidebar__content {
+        padding: 1rem 1.1rem 1.25rem;
+    }
+
+    .contact-sidebar__contact {
+        gap: 0.75rem;
+        padding: 1.15rem 0 1.05rem;
+        font-size: clamp(1.3rem, 6.4vw, 3rem);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-sidebar *,
+    .contact-sidebar {
+        transition-duration: 0.01ms !important;
+    }
+}

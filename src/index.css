@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-DM-sans: "DM Sans", sans-serif;
+}
+
+@layer base {
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    font-family: var(--font-DM-sans);
+    background-color: #ebebeb;
+    color: #1B1A1F;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+  .info .line {
+    padding-bottom: 0.1em;
+    margin-bottom: -0.1em;
+    overflow: hidden;
+  }
+
+}
