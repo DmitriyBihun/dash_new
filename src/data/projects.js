@@ -3,6 +3,7 @@ import cryptoProj from '../assets/projects/cryptoProj.avif'
 import blogProj from '../assets/projects/blogProj.avif'
 import mpmProj from '../assets/projects/mpmProj.avif'
 import herewasProj from '../assets/projects/herewasProj.avif'
+import modelProj from '../assets/projects/modelProj.avif'
 
 const projects = [
     {
@@ -44,6 +45,14 @@ const projects = [
         stack: ['Vite', 'Redux', 'Firebase', 'lenis', 'gsap'],
         link: 'https://herewas.me/',
         image: herewasProj,
+    },
+    {
+        id: 6,
+        title: 'Modeling agency',
+        description: 'A presentation website for a modeling agency, designed in a modern style.',
+        stack: ['Vite', 'Tailwind', 'lenis', 'gsap'],
+        link: 'https://model-agency-v1.netlify.app',
+        image: modelProj,
     },
 ];
 
